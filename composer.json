@@ -1,0 +1,12 @@
+{
+  "name": "fortifi/webhooks",
+  "description": "Fortifi Webhooks",
+  "homepage": "http://fortifi.co/",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Fortifi\\Webhooks\\": "src/"
+    }
+  }
+}
