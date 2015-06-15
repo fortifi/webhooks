@@ -1,6 +1,8 @@
 <?php
 namespace Fortifi\Webhooks\Payloads;
 
+use Packaged\Helpers\Objects;
+
 abstract class FortifiWebhookPayload implements \JsonSerializable
 {
   private $_event;
@@ -31,13 +33,13 @@ abstract class FortifiWebhookPayload implements \JsonSerializable
       'sig'   => $this->_signature,
       'uuid'  => $this->_payloadId,
       'rqid'  => $this->_requestId,
-      'data'  => get_public_properties($this)
+      'data'  => Objects::propertyValues($this)
     ];
   }
 
   public function prepareForTransport($secret, $payloadId, $requestId)
   {
-    $data = json_encode(get_public_properties($this));
+    $data = json_encode(Objects::propertyValues($this));
     $this->_dataHash = md5($data);
     $this->_signature = md5($secret . $this->_dataHash);
     $this->_payloadId = $payloadId;
@@ -54,13 +56,13 @@ abstract class FortifiWebhookPayload implements \JsonSerializable
   public static function hydrateFromJson($json)
   {
     $rawPayload = json_decode($json);
-    $payload = new static(idp($rawPayload, 'event'));
+    $payload = new static(Objects::property($rawPayload, 'event'));
 
-    $payload->_signature = idp($rawPayload, 'sig');
-    $payload->_payloadId = idp($rawPayload, 'uuid');
-    $payload->_requestId = idp($rawPayload, 'rqid');
+    $payload->_signature = Objects::property($rawPayload, 'sig');
+    $payload->_payloadId = Objects::property($rawPayload, 'uuid');
+    $payload->_requestId = Objects::property($rawPayload, 'rqid');
 
-    $data = idp($rawPayload, 'data', new \stdClass());
+    $data = Objects::property($rawPayload, 'data', new \stdClass());
     $payload->_dataHash = md5(json_encode($rawPayload->data));
     foreach($payload as $key => $value)
     {
