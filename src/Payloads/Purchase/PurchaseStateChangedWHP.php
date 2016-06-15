@@ -1,7 +1,7 @@
 <?php
 namespace Fortifi\Webhooks\Payloads\Purchase;
 
-class PurchaseStateChangedWHP
+class PurchaseStateChangedWHP extends PurchaseWHP
 {
   public $oldState;
   public $newState;
