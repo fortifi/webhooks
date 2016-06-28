@@ -20,4 +20,6 @@ class PurchaseCreatedWHP extends PurchaseWHP
   public $cycleTerm;
   public $cycleExact;
   public $cycleType;
+
+  public $quantity;
 }
