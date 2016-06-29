@@ -37,4 +37,24 @@ class Webhooks
       PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
     ];
   }
+  
+  public static function allWithDisplayNames()
+  {
+    $events = [];
+    foreach(static::all() as $event => $class)
+    {
+      $events[] = static::getDisplayName($event);
+    }
+    return $events;
+  }
+
+  public static function getDisplayName($event)
+  {
+    switch($event)
+    {
+      default:
+        $event = str_replace('.', ' ', $event);
+        return ucwords($event);
+    }
+  }
 }
