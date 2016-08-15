@@ -6,4 +6,5 @@ class InvoiceTransactionWHP extends InvoiceWHP
   public $transactionId;
   public $transactionDate;
   public $amount = 0;
+  public $paymentMethod;
 }
