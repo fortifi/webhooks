@@ -5,4 +5,5 @@ final class PurchaseWHE
 {
   const CREATED = 'purchase.created';
   const STATE_CHANGE = 'purchase.state.change';
+  const PRICE_CHANGE = 'purchase.price.change';
 }

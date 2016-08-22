@@ -16,6 +16,7 @@ use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountCreatedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountUpdatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseCreatedWHP;
+use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Packaged\Helpers\Objects;
 
@@ -42,6 +43,7 @@ class Webhooks
       OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
       PurchaseWHE::CREATED            => PurchaseCreatedWHP::class,
       PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
+      PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
       PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
       PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
       CustomerWHE::CREATED            => CustomerCreatedWHP::class,
