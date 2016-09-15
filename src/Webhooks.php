@@ -13,7 +13,9 @@ use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
+use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountArchivedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountCreatedWHP;
+use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountSetDefaultWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountUpdatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseCreatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
@@ -46,6 +48,8 @@ class Webhooks
       PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
       PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
       PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
+      PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
+      PaymentAccountWHE::SET_DEFAULT  => PaymentAccountSetDefaultWHP::class,
       CustomerWHE::CREATED            => CustomerCreatedWHP::class,
       InvoiceWHE::CREATED             => InvoiceWHP::class,
     ];

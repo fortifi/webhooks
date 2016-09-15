@@ -1,6 +1,6 @@
 <?php
 namespace Fortifi\Webhooks\Payloads\PaymentAccount;
 
-class PaymentAccountUpdatedWHP extends PaymentAccountWHP
+class PaymentAccountArchivedWHP extends PaymentAccountWHP
 {
 }

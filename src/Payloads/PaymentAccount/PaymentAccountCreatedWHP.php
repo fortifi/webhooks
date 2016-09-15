@@ -1,10 +1,6 @@
 <?php
 namespace Fortifi\Webhooks\Payloads\PaymentAccount;
 
-use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
-
-class PaymentAccountCreatedWHP extends DataNodeWHP
+class PaymentAccountCreatedWHP extends PaymentAccountWHP
 {
-  public $ownerFid;
-  public $paymentAccountType;
 }
