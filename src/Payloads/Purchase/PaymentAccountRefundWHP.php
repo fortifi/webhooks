@@ -6,4 +6,6 @@ use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountWHP;
 class PaymentAccountRefundWHP extends PaymentAccountWHP
 {
   public $purchaseFid;
+  public $currency;
+  public $amount;
 }
