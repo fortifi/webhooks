@@ -7,4 +7,5 @@ final class PaymentAccountWHE
   const UPDATED = 'payment.account.updated';
   const SET_DEFAULT = 'payment.account.default';
   const ARCHIVED = 'payment.account.archived';
+  const REFUNDED = 'payment.account.refunded';
 }
