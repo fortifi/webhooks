@@ -7,4 +7,5 @@ final class PurchaseWHE
   const STATE_CHANGE = 'purchase.state.change';
   const PRICE_CHANGE = 'purchase.price.change';
   const REFUNDED = 'purchase.refunded';
+  const SUBSCRIPTION_RENEW = 'purchase.subscription.renew';
 }
