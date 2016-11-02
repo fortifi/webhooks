@@ -1,5 +1,5 @@
 <?php
-namespace ortifi\Webhooks\Payloads\Payment;
+namespace Fortifi\Webhooks\Payloads\Payment;
 
 use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 
