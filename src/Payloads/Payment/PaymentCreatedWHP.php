@@ -12,4 +12,6 @@ class PaymentCreatedWHP extends DataNodeWHP
   public $paymentDate;
   public $paymentMethod;
   public $type;
+  public $exchangeRate;
+  public $feeExchangeRate;
 }
