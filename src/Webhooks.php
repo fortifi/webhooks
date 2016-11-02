@@ -43,22 +43,22 @@ class Webhooks
   public static function all()
   {
     return [
-      AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
       AdvertiserWHE::CAMPAIGN_CREATED => AdvertiserCampaignCreatedWHP::class,
-      OrderWHE::CREATED               => OrderCreatedWHP::class,
-      OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
-      PaymentWHE::CREATED             => PaymentCreatedWHP::class,
-      PurchaseWHE::CREATED            => PurchaseCreatedWHP::class,
-      PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
-      PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
-      PurchaseWHE::REFUNDED           => PurchaseRefundWHP::class,
-      PurchaseWHE::SUBSCRIPTION_RENEW => PurchaseSubscriptionRenewWHP::class,
-      PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
-      PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
-      PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
-      PaymentAccountWHE::SET_DEFAULT  => PaymentAccountSetDefaultWHP::class,
+      AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED            => CustomerCreatedWHP::class,
       InvoiceWHE::CREATED             => InvoiceWHP::class,
+      OrderWHE::CREATED               => OrderCreatedWHP::class,
+      OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
+      PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
+      PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
+      PaymentAccountWHE::SET_DEFAULT  => PaymentAccountSetDefaultWHP::class,
+      PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
+      PaymentWHE::CREATED             => PaymentCreatedWHP::class,
+      PurchaseWHE::CREATED            => PurchaseCreatedWHP::class,
+      PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
+      PurchaseWHE::REFUNDED           => PurchaseRefundWHP::class,
+      PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
+      PurchaseWHE::SUBSCRIPTION_RENEW => PurchaseSubscriptionRenewWHP::class,
     ];
   }
 }
