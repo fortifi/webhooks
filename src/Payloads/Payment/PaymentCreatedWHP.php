@@ -5,11 +5,11 @@ use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 
 class PaymentCreatedWHP extends DataNodeWHP
 {
-  public $purchaseFid;
   public $invoiceFID;
   public $orderFid;
-  public $paymentAmountFid;
+  public $paymentAmount;
   public $currencyCode;
   public $paymentDate;
   public $paymentMethod;
+  public $type;
 }
