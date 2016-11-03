@@ -11,6 +11,7 @@ use Fortifi\Webhooks\Events\PurchaseWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
+use Fortifi\Webhooks\Payloads\Invoice\InvoiceTransactionWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
@@ -47,6 +48,7 @@ class Webhooks
       AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED            => CustomerCreatedWHP::class,
       InvoiceWHE::CREATED             => InvoiceWHP::class,
+      InvoiceWHE::TRANSACTION         => InvoiceTransactionWHP::class,
       OrderWHE::CREATED               => OrderCreatedWHP::class,
       OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
       PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
