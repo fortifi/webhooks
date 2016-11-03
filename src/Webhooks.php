@@ -25,6 +25,8 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
+use ortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
+use ortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
 use Packaged\Helpers\Objects;
 
 class Webhooks
@@ -48,7 +50,10 @@ class Webhooks
       AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED            => CustomerCreatedWHP::class,
       InvoiceWHE::CREATED             => InvoiceWHP::class,
-      InvoiceWHE::TRANSACTION         => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_PAYMENT         => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_REFUND          => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_CREDIT          => InvoiceCreditWHP::class,
+      InvoiceWHE::DISREGARDED         => InvoiceDisregardedWHP::class,
       OrderWHE::CREATED               => OrderCreatedWHP::class,
       OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
       PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
