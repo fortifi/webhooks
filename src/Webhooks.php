@@ -11,6 +11,7 @@ use Fortifi\Webhooks\Events\PurchaseWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
+use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceTransactionWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
@@ -25,7 +26,6 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
-use ortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
 use ortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
 use Packaged\Helpers\Objects;
 
