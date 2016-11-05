@@ -1,7 +1,5 @@
 <?php
-namespace ortifi\Webhooks\Payloads\Invoice;
-
-use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
+namespace Fortifi\Webhooks\Payloads\Invoice;
 
 class InvoiceDisregardedWHP extends InvoiceWHP
 {

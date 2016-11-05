@@ -26,7 +26,7 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
-use ortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
+use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
 use Packaged\Helpers\Objects;
 
 class Webhooks
