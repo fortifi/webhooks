@@ -12,10 +12,14 @@ use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
+use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceTransactionWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentCardCreatedWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentCardDeletedWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentCardUpdatedWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentCreatedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountArchivedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountCreatedWHP;
@@ -25,8 +29,9 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchaseCreatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
+use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionCreatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
-use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
+use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionUpdatedWHP;
 use Packaged\Helpers\Objects;
 
 class Webhooks
@@ -46,26 +51,31 @@ class Webhooks
   public static function all()
   {
     return [
-      AdvertiserWHE::CAMPAIGN_CREATED => AdvertiserCampaignCreatedWHP::class,
-      AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
-      CustomerWHE::CREATED            => CustomerCreatedWHP::class,
-      InvoiceWHE::CREATED             => InvoiceWHP::class,
-      InvoiceWHE::ADD_PAYMENT         => InvoiceTransactionWHP::class,
-      InvoiceWHE::ADD_REFUND          => InvoiceTransactionWHP::class,
-      InvoiceWHE::ADD_CREDIT          => InvoiceCreditWHP::class,
-      InvoiceWHE::DISREGARDED         => InvoiceDisregardedWHP::class,
-      OrderWHE::CREATED               => OrderCreatedWHP::class,
-      OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
-      PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
-      PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
-      PaymentAccountWHE::SET_DEFAULT  => PaymentAccountSetDefaultWHP::class,
-      PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
-      PaymentWHE::CREATED             => PaymentCreatedWHP::class,
-      PurchaseWHE::CREATED            => PurchaseCreatedWHP::class,
-      PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
-      PurchaseWHE::REFUNDED           => PurchaseRefundWHP::class,
-      PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
-      PurchaseWHE::SUBSCRIPTION_RENEW => PurchaseSubscriptionRenewWHP::class,
+      AdvertiserWHE::CAMPAIGN_CREATED   => AdvertiserCampaignCreatedWHP::class,
+      AdvertiserWHE::CREATED            => AdvertiserCreatedWHP::class,
+      CustomerWHE::CREATED              => CustomerCreatedWHP::class,
+      InvoiceWHE::CREATED               => InvoiceWHP::class,
+      InvoiceWHE::ADD_PAYMENT           => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_REFUND            => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_CREDIT            => InvoiceCreditWHP::class,
+      InvoiceWHE::DISREGARDED           => InvoiceDisregardedWHP::class,
+      OrderWHE::CREATED                 => OrderCreatedWHP::class,
+      OrderWHE::STATE_CHANGE            => OrderStateChangedWHP::class,
+      PaymentAccountWHE::ARCHIVED       => PaymentAccountArchivedWHP::class,
+      PaymentAccountWHE::CREATED        => PaymentAccountCreatedWHP::class,
+      PaymentAccountWHE::SET_DEFAULT    => PaymentAccountSetDefaultWHP::class,
+      PaymentAccountWHE::UPDATED        => PaymentAccountUpdatedWHP::class,
+      PaymentWHE::CREATED               => PaymentCreatedWHP::class,
+      PaymentWHE::CREDIT_CARD_UPDATED   => PaymentCardUpdatedWHP::class,
+      PaymentWHE::CREDIT_CARD_CREATED   => PaymentCardCreatedWHP::class,
+      PaymentWHE::CREDIT_CARD_DELETED   => PaymentCardDeletedWHP::class,
+      PurchaseWHE::CREATED              => PurchaseCreatedWHP::class,
+      PurchaseWHE::PRICE_CHANGE         => PurchasePriceChangedWHP::class,
+      PurchaseWHE::REFUNDED             => PurchaseRefundWHP::class,
+      PurchaseWHE::STATE_CHANGE         => PurchaseStateChangedWHP::class,
+      PurchaseWHE::SUBSCRIPTION_RENEW   => PurchaseSubscriptionRenewWHP::class,
+      PurchaseWHE::SUBSCRIPTION_UPDATED => PurchaseSubscriptionUpdatedWHP::class,
+      PurchaseWHE::SUBSCRIPTION_CREATED => PurchaseSubscriptionCreatedWHP::class,
     ];
   }
 }
