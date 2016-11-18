@@ -8,6 +8,4 @@ final class PurchaseWHE
   const PRICE_CHANGE = 'purchase.price.change';
   const REFUNDED = 'purchase.refunded';
   const SUBSCRIPTION_RENEW = 'purchase.subscription.renew';
-  const SUBSCRIPTION_CREATED = 'purchase.subscription.created';
-  const SUBSCRIPTION_UPDATED = 'purchase.subscription.updated';
 }
