@@ -7,6 +7,7 @@ class InvoiceCreditWHP extends InvoiceWHP
   public $creditAmountType;
   public $amount;
   public $reasonFid;
+  public $reason;
   public $currency;
   public $creditDate;
 }
