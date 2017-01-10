@@ -5,4 +5,7 @@ class PurchaseStateChangedWHP extends PurchaseWHP
 {
   public $oldState;
   public $newState;
+
+  public $reason;
+  public $reasonFid;
 }
