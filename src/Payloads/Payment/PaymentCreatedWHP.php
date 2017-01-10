@@ -14,4 +14,7 @@ class PaymentCreatedWHP extends DataNodeWHP
   public $type;
   public $exchangeRate;
   public $feeExchangeRate;
+  public $accountType; // Visa, Amex, PayPal etc
+  public $fee;
+  public $feeCurrency;
 }
