@@ -12,4 +12,8 @@ class OrderWHP extends DataNodeWHP
   public $taxAmount = 0;
   public $totalAmount = 0;
   public $amountPaid = 0;
+
+  public $currency;
+  public $usdAmount;
+  public $exchangeRate;
 }
