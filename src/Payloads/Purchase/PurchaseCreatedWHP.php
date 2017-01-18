@@ -15,8 +15,6 @@ class PurchaseCreatedWHP extends PurchaseWHP
   public $discount;
   public $setupDiscount;
 
-  public $currency;
-
   public $cycleTerm; // e.g 3 for every 3 months
   public $cycleExact; // e.g. M for monday, or 3 for 3rd (based on cycle)
   public $cycleType; // One Time, Daily, Weekly, Monthly // ProductTermType enum

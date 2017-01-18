@@ -6,7 +6,6 @@ use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 class InvoiceWHP extends DataNodeWHP
 {
   public $customerFid;
-  public $currency;
   public $status;
   public $amountPaid = 0;
   public $baseAmount = 0;
@@ -17,4 +16,8 @@ class InvoiceWHP extends DataNodeWHP
   public $creditedAmount = 0;
   public $dueDate;
   public $purchaseFids = [];
+
+  public $currency;
+  public $usdAmount;
+  public $exchangeRate;
 }
