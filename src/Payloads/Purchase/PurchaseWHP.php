@@ -10,6 +10,6 @@ class PurchaseWHP extends DataNodeWHP
   public $priceFid;
 
   public $currency;
-  public $usdAmount;
+  public $totalAmountUsd;
   public $exchangeRate;
 }

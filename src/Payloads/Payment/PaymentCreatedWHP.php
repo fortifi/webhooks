@@ -19,6 +19,6 @@ class PaymentCreatedWHP extends DataNodeWHP
   public $transactionId;
 
   public $currency;
-  public $usdAmount;
+  public $totalAmountUsd;
   public $exchangeRate;
 }

@@ -18,6 +18,6 @@ class InvoiceWHP extends DataNodeWHP
   public $purchaseFids = [];
 
   public $currency;
-  public $usdAmount;
+  public $totalAmountUsd;
   public $exchangeRate;
 }
