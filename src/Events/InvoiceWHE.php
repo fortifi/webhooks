@@ -8,4 +8,5 @@ final class InvoiceWHE
   const ADD_REFUND = 'invoice.add.refund';
   const ADD_CREDIT = 'invoice.add.credit';
   const DISREGARDED = 'invoice.disregarded';
+  const PAID = 'invoice.paid';
 }
