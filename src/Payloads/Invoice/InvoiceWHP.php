@@ -6,7 +6,7 @@ use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 class InvoiceWHP extends DataNodeWHP
 {
   public $customerFid;
-  public $status;
+  public $status; // Uses the InvoiceStatus enum
   public $amountPaid = 0;
   public $baseAmount = 0;
   public $discountAmount = 0;
