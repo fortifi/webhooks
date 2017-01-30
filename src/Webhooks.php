@@ -18,7 +18,9 @@ use Fortifi\Webhooks\Payloads\Invoice\InvoiceTransactionWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentAuthorisationTransactionWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentCreatedWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentFailedTransactionWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountArchivedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountCreatedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountSetDefaultWHP;
@@ -47,27 +49,29 @@ class Webhooks
   public static function all()
   {
     return [
-      AdvertiserWHE::CAMPAIGN_CREATED => AdvertiserCampaignCreatedWHP::class,
-      AdvertiserWHE::CREATED          => AdvertiserCreatedWHP::class,
-      CustomerWHE::CREATED            => CustomerCreatedWHP::class,
-      InvoiceWHE::CREATED             => InvoiceWHP::class,
-      InvoiceWHE::ADD_PAYMENT         => InvoiceTransactionWHP::class,
-      InvoiceWHE::ADD_REFUND          => InvoiceTransactionWHP::class,
-      InvoiceWHE::ADD_CREDIT          => InvoiceCreditWHP::class,
-      InvoiceWHE::DISREGARDED         => InvoiceDisregardedWHP::class,
-      InvoiceWHE::PAID                => InvoicePaidWHP::class,
-      OrderWHE::CREATED               => OrderCreatedWHP::class,
-      OrderWHE::STATE_CHANGE          => OrderStateChangedWHP::class,
-      PaymentAccountWHE::ARCHIVED     => PaymentAccountArchivedWHP::class,
-      PaymentAccountWHE::CREATED      => PaymentAccountCreatedWHP::class,
-      PaymentAccountWHE::SET_DEFAULT  => PaymentAccountSetDefaultWHP::class,
-      PaymentAccountWHE::UPDATED      => PaymentAccountUpdatedWHP::class,
-      PaymentWHE::CREATED             => PaymentCreatedWHP::class,
-      PurchaseWHE::CREATED            => PurchaseCreatedWHP::class,
-      PurchaseWHE::PRICE_CHANGE       => PurchasePriceChangedWHP::class,
-      PurchaseWHE::REFUNDED           => PurchaseRefundWHP::class,
-      PurchaseWHE::STATE_CHANGE       => PurchaseStateChangedWHP::class,
-      PurchaseWHE::SUBSCRIPTION_RENEW => PurchaseSubscriptionRenewWHP::class,
+      AdvertiserWHE::CAMPAIGN_CREATED       => AdvertiserCampaignCreatedWHP::class,
+      AdvertiserWHE::CREATED                => AdvertiserCreatedWHP::class,
+      CustomerWHE::CREATED                  => CustomerCreatedWHP::class,
+      InvoiceWHE::CREATED                   => InvoiceWHP::class,
+      InvoiceWHE::ADD_PAYMENT               => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_REFUND                => InvoiceTransactionWHP::class,
+      InvoiceWHE::ADD_CREDIT                => InvoiceCreditWHP::class,
+      InvoiceWHE::DISREGARDED               => InvoiceDisregardedWHP::class,
+      InvoiceWHE::PAID                      => InvoicePaidWHP::class,
+      OrderWHE::CREATED                     => OrderCreatedWHP::class,
+      OrderWHE::STATE_CHANGE                => OrderStateChangedWHP::class,
+      PaymentAccountWHE::ARCHIVED           => PaymentAccountArchivedWHP::class,
+      PaymentAccountWHE::CREATED            => PaymentAccountCreatedWHP::class,
+      PaymentAccountWHE::SET_DEFAULT        => PaymentAccountSetDefaultWHP::class,
+      PaymentAccountWHE::UPDATED            => PaymentAccountUpdatedWHP::class,
+      PaymentWHE::CREATED                   => PaymentCreatedWHP::class,
+      PaymentWHE::FAILED_TRANSACTION        => PaymentFailedTransactionWHP::class,
+      PaymentWHE::AUTHORISATION_TRANSACTION => PaymentAuthorisationTransactionWHP::class,
+      PurchaseWHE::CREATED                  => PurchaseCreatedWHP::class,
+      PurchaseWHE::PRICE_CHANGE             => PurchasePriceChangedWHP::class,
+      PurchaseWHE::REFUNDED                 => PurchaseRefundWHP::class,
+      PurchaseWHE::STATE_CHANGE             => PurchaseStateChangedWHP::class,
+      PurchaseWHE::SUBSCRIPTION_RENEW       => PurchaseSubscriptionRenewWHP::class,
     ];
   }
 }
