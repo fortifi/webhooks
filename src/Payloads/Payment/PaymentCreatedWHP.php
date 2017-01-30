@@ -1,7 +1,9 @@
 <?php
 namespace Fortifi\Webhooks\Payloads\Payment;
 
-class PaymentCreatedWHP extends AbstractPaymentTransactionWHP
+use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
+
+class PaymentCreatedWHP extends DataNodeWHP
 {
   public $invoiceFID;
   public $orderFid;
