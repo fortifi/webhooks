@@ -11,6 +11,5 @@ abstract class AbstractPaymentTransactionWHP extends DataNodeWHP
   public $amount;
   public $transactionDate;
   public $transactionID;
-  public $paymentMethod;
   public $paymentGateway;
 }
