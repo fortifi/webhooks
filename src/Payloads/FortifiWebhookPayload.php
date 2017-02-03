@@ -10,6 +10,7 @@ abstract class FortifiWebhookPayload implements \JsonSerializable
   private $_dataHash;
   private $_payloadId;
   private $_requestId;
+  private $_timestamp;
 
   /**
    * @param string $event Event Name
@@ -17,6 +18,7 @@ abstract class FortifiWebhookPayload implements \JsonSerializable
   final public function __construct($event)
   {
     $this->_event = $event;
+    $this->_timestamp = time();
   }
 
   /**
@@ -30,11 +32,12 @@ abstract class FortifiWebhookPayload implements \JsonSerializable
   public function jsonSerialize()
   {
     return [
-      'event' => $this->_event,
-      'sig'   => $this->_signature,
-      'uuid'  => $this->_payloadId,
-      'rqid'  => $this->_requestId,
-      'data'  => Objects::propertyValues($this),
+      'event'     => $this->_event,
+      'sig'       => $this->_signature,
+      'uuid'      => $this->_payloadId,
+      'rqid'      => $this->_requestId,
+      'timestamp' => $this->_timestamp,
+      'data'      => Objects::propertyValues($this),
     ];
   }
 
