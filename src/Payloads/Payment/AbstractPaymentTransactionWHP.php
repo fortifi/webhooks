@@ -7,11 +7,14 @@ abstract class AbstractPaymentTransactionWHP extends DataNodeWHP
 {
   public $customerFid;
   public $orderFid;
-  public $currency;
   public $statusCode;
   public $statusMessage;
   public $amount;
   public $transactionDate;
   public $transactionID;
   public $paymentGateway;
+
+  public $amountUsd;
+  public $currency;
+  public $exchangeRate;
 }
