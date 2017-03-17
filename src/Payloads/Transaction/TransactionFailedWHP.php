@@ -13,5 +13,5 @@ class TransactionFailedWHP extends DataNodeWHP
   public $exchangeRate;
   public $transactionDate;
   public $ipnErrorMessage;
-  public $customerFID;
+  public $customerFid;
 }
