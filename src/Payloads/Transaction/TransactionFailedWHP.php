@@ -5,13 +5,12 @@ use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 
 class TransactionFailedWHP extends DataNodeWHP
 {
-  public $subscriptionFid;
-  public $subscriptionName;
-  public $renewalAttemptNumber;
-  public $renewalAmount;
-  public $renewalAmountUsd;
+  public $subscriptionFids = [];
+  public $attemptNumber;
+  public $amount;
+  public $amountUsd;
   public $exchangeRate;
   public $transactionDate;
-  public $ipnErrorMessage;
+  public $errorStatus;
   public $customerFid;
 }
