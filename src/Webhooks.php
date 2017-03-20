@@ -8,6 +8,7 @@ use Fortifi\Webhooks\Events\OrderWHE;
 use Fortifi\Webhooks\Events\PaymentAccountWHE;
 use Fortifi\Webhooks\Events\PaymentWHE;
 use Fortifi\Webhooks\Events\PurchaseWHE;
+use Fortifi\Webhooks\Events\TransactionWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
@@ -31,6 +32,7 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
+use Fortifi\Webhooks\Payloads\Transaction\TransactionFailedWHP;
 use Packaged\Helpers\Objects;
 
 class Webhooks
@@ -74,6 +76,7 @@ class Webhooks
       PurchaseWHE::STATE_CHANGE              => PurchaseStateChangedWHP::class,
       PurchaseWHE::SUBSCRIPTION_RENEW        => PurchaseSubscriptionRenewWHP::class,
       PurchaseWHE::AUTO_CHARGE_STATE_UPDATED => PurchaseAutoChargeStateChangedWHP::class,
+      TransactionWHE::FAILED                 => TransactionFailedWHP::class,
     ];
   }
   
