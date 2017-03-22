@@ -14,4 +14,6 @@ class TransactionFailedWHP extends DataNodeWHP
   public $errorMessage;
   public $errorCode;
   public $customerFid;
+  public $gatewayTransactionId;
+  public $serviceTransactionId;
 }
