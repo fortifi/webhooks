@@ -5,5 +5,5 @@ class PaymentAccountArchivedWHP extends PaymentAccountWHP
 {
   public $cardLast4;
   public $paypalAgreementId;
-  public $subscriptionsAffected;
+  public $subscriptionsAffected = [];
 }
