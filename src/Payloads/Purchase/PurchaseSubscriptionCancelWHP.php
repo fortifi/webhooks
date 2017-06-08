@@ -5,7 +5,13 @@ class PurchaseSubscriptionCancelWHP extends PurchaseWHP
 {
   public $refundType; // SubscriptionRefundType
   public $closeReason; // SubscriptionCloseReason
-  public $cancelTime;
+
   /** @var bool */
   public $terminationFee;
+  public $cancelTime;
+
+  public $refundAmount;
+  public $refundCurrency;
+  public $refundTotalAmountUsd;
+  public $refundExchangeRate;
 }
