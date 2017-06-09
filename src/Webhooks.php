@@ -31,6 +31,7 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchaseCreatedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
+use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionCancelWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
 use Fortifi\Webhooks\Payloads\Transaction\TransactionFailedWHP;
 use Packaged\Helpers\Objects;
@@ -75,11 +76,12 @@ class Webhooks
       PurchaseWHE::REFUNDED                  => PurchaseRefundWHP::class,
       PurchaseWHE::STATE_CHANGE              => PurchaseStateChangedWHP::class,
       PurchaseWHE::SUBSCRIPTION_RENEW        => PurchaseSubscriptionRenewWHP::class,
+      PurchaseWHE::SUBSCRIPTION_CANCEL       => PurchaseSubscriptionCancelWHP::class,
       PurchaseWHE::AUTO_CHARGE_STATE_UPDATED => PurchaseAutoChargeStateChangedWHP::class,
       TransactionWHE::FAILED                 => TransactionFailedWHP::class,
     ];
   }
-  
+
   public static function allWithDisplayNames()
   {
     $events = [];
