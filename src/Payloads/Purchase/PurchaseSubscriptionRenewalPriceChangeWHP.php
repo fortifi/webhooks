@@ -8,9 +8,10 @@ class PurchaseSubscriptionRenewalPriceChangeWHP extends PurchaseWHP
   public $oldDiscountAmount;
   public $oldTaxAmount;
   public $oldRenewalAmountUsd;
-  public $offerFid;
+  public $oldOfferFid;
   public $newRenewalAmount;
   public $newDiscountAmount;
   public $newTaxAmount;
   public $newRenewalAmountUsd;
+  public $newOfferFid;
 }
