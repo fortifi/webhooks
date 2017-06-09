@@ -8,7 +8,7 @@ class PurchaseSubscriptionCancelWHP extends PurchaseWHP
 
   /** @var bool */
   public $terminationFee;
-  public $cancelTime;
+  public $endDate;
 
   public $refundAmount;
   public $refundCurrency;
