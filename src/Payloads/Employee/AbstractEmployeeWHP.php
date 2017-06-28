@@ -13,5 +13,4 @@ abstract class AbstractEmployeeWHP extends DataNodeWHP
   public $emailFid;
   public $isDisabled;
   public $permissions;
-  public $isAdmin;
 }
