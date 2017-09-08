@@ -3,7 +3,7 @@ namespace Fortifi\Webhooks\Payloads\Contact;
 
 use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 
-class ContactWHP extends DataNodeWHP
+class ContactPhoneWHP extends DataNodeWHP
 {
   public $phone;
 }
