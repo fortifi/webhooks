@@ -13,8 +13,8 @@ use Fortifi\Webhooks\Events\PurchaseWHE;
 use Fortifi\Webhooks\Events\TransactionWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
-use Fortifi\Webhooks\Payloads\Contact\ContactPhoneSubscribedWHP;
 use Fortifi\Webhooks\Payloads\Contact\ContactPhoneUnsubscribedWHP;
+use Fortifi\Webhooks\Payloads\Contact\ContactWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
 use Fortifi\Webhooks\Payloads\Employee\EmployeeAuthWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
@@ -62,8 +62,8 @@ class Webhooks
       AdvertiserWHE::CAMPAIGN_CREATED                => AdvertiserCampaignCreatedWHP::class,
       AdvertiserWHE::CREATED                         => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED                           => CustomerCreatedWHP::class,
-      ContactWHE::PHONE_SUBSCRIBED                   => ContactPhoneSubscribedWHP::class,
-      ContactWHE::PHONE_UNSUBSCRIBED                 => ContactPhoneUnsubscribedWHP::class,
+      ContactWHE::PHONE_SUBSCRIBED                   => ContactWHP::class,
+      ContactWHE::PHONE_UNSUBSCRIBED                 => ContactWHP::class,
       InvoiceWHE::CREATED                            => InvoiceWHP::class,
       InvoiceWHE::ADD_PAYMENT                        => InvoiceTransactionWHP::class,
       InvoiceWHE::ADD_REFUND                         => InvoiceTransactionWHP::class,
