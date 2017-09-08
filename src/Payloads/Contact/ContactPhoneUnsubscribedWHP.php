@@ -1,10 +1,6 @@
 <?php
 namespace Fortifi\Webhooks\Payloads\Contact;
 
-use Fortifi\Webhooks\Payloads\Customer\CustomerWHP;
-
-class ContactPhoneUnsubscribedWHP extends CustomerWHP
+class ContactPhoneUnsubscribedWHP extends AbstractContactPhoneWHP
 {
-  public $phone;
-  public $phoneFid;
 }
