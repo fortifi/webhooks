@@ -2,6 +2,7 @@
 namespace Fortifi\Webhooks;
 
 use Fortifi\Webhooks\Events\AdvertiserWHE;
+use Fortifi\Webhooks\Events\ContactWHE;
 use Fortifi\Webhooks\Events\CustomerWHE;
 use Fortifi\Webhooks\Events\EmployeeWHE;
 use Fortifi\Webhooks\Events\InvoiceWHE;
@@ -12,9 +13,9 @@ use Fortifi\Webhooks\Events\PurchaseWHE;
 use Fortifi\Webhooks\Events\TransactionWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
+use Fortifi\Webhooks\Payloads\Contact\ContactPhoneSubscribedWHP;
+use Fortifi\Webhooks\Payloads\Contact\ContactPhoneUnsubscribedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
-use Fortifi\Webhooks\Payloads\Customer\CustomerPhoneSubscribedWHP;
-use Fortifi\Webhooks\Payloads\Customer\CustomerPhoneUnsubscribedWHP;
 use Fortifi\Webhooks\Payloads\Employee\EmployeeAuthWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
@@ -61,8 +62,8 @@ class Webhooks
       AdvertiserWHE::CAMPAIGN_CREATED                => AdvertiserCampaignCreatedWHP::class,
       AdvertiserWHE::CREATED                         => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED                           => CustomerCreatedWHP::class,
-      CustomerWHE::PHONE_SUBSCRIBED                  => CustomerPhoneSubscribedWHP::class,
-      CustomerWHE::PHONE_UNSUBSCRIBED                => CustomerPhoneUnsubscribedWHP::class,
+      ContactWHE::PHONE_SUBSCRIBED                   => ContactPhoneSubscribedWHP::class,
+      ContactWHE::PHONE_UNSUBSCRIBED                 => ContactPhoneUnsubscribedWHP::class,
       InvoiceWHE::CREATED                            => InvoiceWHP::class,
       InvoiceWHE::ADD_PAYMENT                        => InvoiceTransactionWHP::class,
       InvoiceWHE::ADD_REFUND                         => InvoiceTransactionWHP::class,
