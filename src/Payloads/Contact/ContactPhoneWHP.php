@@ -6,4 +6,5 @@ use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
 class ContactPhoneWHP extends DataNodeWHP
 {
   public $phone;
+  public $customerFid;
 }
