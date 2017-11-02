@@ -14,6 +14,7 @@ class InvoiceWHP extends DataNodeWHP
   public $totalAmount = 0;
   public $refundedAmount = 0;
   public $creditedAmount = 0;
+  public $chargebackAmount = 0;
   public $dueDate;
   public $purchaseFids = [];
 
