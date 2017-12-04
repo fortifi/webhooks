@@ -9,6 +9,7 @@ final class PurchaseWHE
   const REFUNDED = 'purchase.refunded';
   const SUBSCRIPTION_RENEW = 'purchase.subscription.renew';
   const SUBSCRIPTION_CANCEL = 'purchase.subscription.cancel';
+  const SUBSCRIPTION_RE_ENABLE = 'purchase.subscription.reenable';
   const SUBSCRIPTION_RENEWAL_PRICE_CHANGE = 'purchase.subscription.renewal.price.change';
   const AUTO_CHARGE_STATE_UPDATED = 'purchase.auto.charge.state.updated';
 }

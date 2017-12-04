@@ -37,6 +37,7 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchasePriceChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseRefundWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionCancelWHP;
+use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionReEnableWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewalPriceChangeWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
 use Fortifi\Webhooks\Payloads\Transaction\TransactionFailedWHP;
@@ -85,6 +86,7 @@ class Webhooks
       PurchaseWHE::STATE_CHANGE                      => PurchaseStateChangedWHP::class,
       PurchaseWHE::SUBSCRIPTION_RENEW                => PurchaseSubscriptionRenewWHP::class,
       PurchaseWHE::SUBSCRIPTION_CANCEL               => PurchaseSubscriptionCancelWHP::class,
+      PurchaseWHE::SUBSCRIPTION_RE_ENABLE            => PurchaseSubscriptionReEnableWHP::class,
       PurchaseWHE::SUBSCRIPTION_RENEWAL_PRICE_CHANGE => PurchaseSubscriptionRenewalPriceChangeWHP::class,
       PurchaseWHE::AUTO_CHARGE_STATE_UPDATED         => PurchaseAutoChargeStateChangedWHP::class,
       TransactionWHE::FAILED                         => TransactionFailedWHP::class,
