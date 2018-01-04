@@ -10,7 +10,7 @@ class PaymentChargebackWHP extends AbstractPaymentTransactionWHP
   public $chargebackAmount;
 
   /** @var float */
-  public $originalTransactionAmount;
+  public $paymentAmount;
 
   /** @var float */
   public $remainingAmount;
