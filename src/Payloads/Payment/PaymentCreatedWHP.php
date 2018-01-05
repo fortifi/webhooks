@@ -22,5 +22,5 @@ class PaymentCreatedWHP extends DataNodeWHP
   public $totalAmountUsd;
   public $exchangeRate;
 
-  public $paymentGateway;
+  public $paymentGatewayFid;
 }
