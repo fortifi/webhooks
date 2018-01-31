@@ -2,6 +2,7 @@
 namespace Fortifi\Webhooks;
 
 use Fortifi\Webhooks\Events\AdvertiserWHE;
+use Fortifi\Webhooks\Events\ChargebackWHE;
 use Fortifi\Webhooks\Events\ContactWHE;
 use Fortifi\Webhooks\Events\CustomerWHE;
 use Fortifi\Webhooks\Events\EmployeeWHE;
@@ -13,7 +14,8 @@ use Fortifi\Webhooks\Events\PurchaseWHE;
 use Fortifi\Webhooks\Events\TransactionWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
-use Fortifi\Webhooks\Payloads\Contact\ContactPhoneUnsubscribedWHP;
+use Fortifi\Webhooks\Payloads\Chargeback\ChargebackActionWHP;
+use Fortifi\Webhooks\Payloads\Chargeback\ChargebackWHP;
 use Fortifi\Webhooks\Payloads\Contact\ContactPhoneWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
 use Fortifi\Webhooks\Payloads\Employee\EmployeeAuthWHP;
@@ -93,6 +95,8 @@ class Webhooks
       PurchaseWHE::AUTO_CHARGE_STATE_UPDATED         => PurchaseAutoChargeStateChangedWHP::class,
       TransactionWHE::FAILED                         => TransactionFailedWHP::class,
       EmployeeWHE::AUTH                              => EmployeeAuthWHP::class,
+      ChargebackWHE::CREATED                         => ChargebackWHP::class,
+      ChargebackWHE::ACTIONED                        => ChargebackActionWHP::class,
     ];
   }
 
