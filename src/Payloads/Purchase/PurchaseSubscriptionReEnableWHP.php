@@ -7,6 +7,7 @@ class PurchaseSubscriptionReEnableWHP extends PurchaseWHP
   public $nextRenewalDate;
   public $reason;
   public $autoCharge;
+  public $renewalMode;
   public $shouldCancel;
   public $shouldSuspend;
   public $suspendDate;
