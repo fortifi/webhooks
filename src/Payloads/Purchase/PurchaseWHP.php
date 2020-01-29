@@ -7,6 +7,8 @@ class PurchaseWHP extends DataNodeWHP
 {
   public $customerFid;
   public $productFid;
+  public $productSkuFid;
+  public $productSku;
   public $priceFid;
 
   public $currency;
