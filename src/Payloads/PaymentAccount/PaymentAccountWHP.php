@@ -13,6 +13,8 @@ abstract class PaymentAccountWHP extends DataNodeWHP
   public $tokenUuid;
   public $methodType;
   public $methodScheme;
+  public $methodProvider;
+  public $methodInputType;
   public $expiryDate;
   public $accountHolder;
   public $issuerName;
