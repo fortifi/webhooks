@@ -1,9 +1,10 @@
 {
   "name": "fortifi/webhooks",
   "description": "Fortifi Webhooks",
-  "homepage": "http://fortifi.co/",
+  "license": "MIT",
+  "homepage": "http://fortifi.io/",
   "require": {
-    "packaged/helpers": "~1.0"
+    "packaged/helpers": "~1.0||~2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.5"
