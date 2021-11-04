@@ -7,4 +7,5 @@ final class PaymentWHE
   const AUTHORISATION_TRANSACTION = 'payment.authorisation.transaction';
   const FAILED_TRANSACTION = 'payment.failed.transaction';
   const CHARGEBACK = 'payment.chargeback';
+  const AGREEMENT_CANCELLED = 'payment.paypal.agreement.cancelled';
 }

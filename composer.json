@@ -4,6 +4,7 @@
   "license": "MIT",
   "homepage": "http://fortifi.io/",
   "require": {
+    "ext-json": "*",
     "packaged/helpers": "~1.0||~2.0"
   },
   "require-dev": {
