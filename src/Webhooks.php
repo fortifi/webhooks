@@ -18,6 +18,7 @@ use Fortifi\Webhooks\Payloads\Chargeback\ChargebackActionWHP;
 use Fortifi\Webhooks\Payloads\Chargeback\ChargebackWHP;
 use Fortifi\Webhooks\Payloads\Contact\ContactPhoneWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
+use Fortifi\Webhooks\Payloads\Customer\CustomerEmailUnsubscribedWHP;
 use Fortifi\Webhooks\Payloads\Employee\EmployeeAuthWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
@@ -67,6 +68,7 @@ class Webhooks
       AdvertiserWHE::CAMPAIGN_CREATED                => AdvertiserCampaignCreatedWHP::class,
       AdvertiserWHE::CREATED                         => AdvertiserCreatedWHP::class,
       CustomerWHE::CREATED                           => CustomerCreatedWHP::class,
+      CustomerWHE::EMAIL_UNSUBSCRIBED                => CustomerEmailUnsubscribedWHP::class,
       ContactWHE::PHONE_SUBSCRIBED                   => ContactPhoneWHP::class,
       ContactWHE::PHONE_UNSUBSCRIBED                 => ContactPhoneWHP::class,
       InvoiceWHE::CREATED                            => InvoiceWHP::class,
