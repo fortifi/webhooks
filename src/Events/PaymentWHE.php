@@ -8,4 +8,5 @@ final class PaymentWHE
   const FAILED_TRANSACTION = 'payment.failed.transaction';
   const CHARGEBACK = 'payment.chargeback';
   const AGREEMENT_CANCELLED = 'payment.paypal.agreement.cancelled';
+  const PAYMENT_METHOD_LOCKED = 'payment.method.locked';
 }
