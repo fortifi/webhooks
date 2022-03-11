@@ -31,6 +31,7 @@ use Fortifi\Webhooks\Payloads\Payment\PaymentAuthorisationTransactionWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentChargebackWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentCreatedWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentFailedTransactionWHP;
+use Fortifi\Webhooks\Payloads\Payment\PaymentMethodLockedWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentPaypalAgreementCancelledWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountArchivedWHP;
 use Fortifi\Webhooks\Payloads\PaymentAccount\PaymentAccountCreatedWHP;
@@ -88,6 +89,7 @@ class Webhooks
       PaymentWHE::AUTHORISATION_TRANSACTION          => PaymentAuthorisationTransactionWHP::class,
       PaymentWHE::CHARGEBACK                         => PaymentChargebackWHP::class,
       PaymentWHE::AGREEMENT_CANCELLED                => PaymentPaypalAgreementCancelledWHP::class,
+      PaymentWHE::PAYMENT_METHOD_LOCKED              => PaymentMethodLockedWHP::class,
       PurchaseWHE::CREATED                           => PurchaseCreatedWHP::class,
       PurchaseWHE::PRICE_CHANGE                      => PurchasePriceChangedWHP::class,
       PurchaseWHE::REFUNDED                          => PurchaseRefundWHP::class,
