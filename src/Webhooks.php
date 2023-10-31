@@ -7,6 +7,7 @@ use Fortifi\Webhooks\Events\ContactWHE;
 use Fortifi\Webhooks\Events\CustomerWHE;
 use Fortifi\Webhooks\Events\EmployeeWHE;
 use Fortifi\Webhooks\Events\InvoiceWHE;
+use Fortifi\Webhooks\Events\MessengerWHE;
 use Fortifi\Webhooks\Events\OrderWHE;
 use Fortifi\Webhooks\Events\PaymentAccountWHE;
 use Fortifi\Webhooks\Events\PaymentWHE;
@@ -26,6 +27,7 @@ use Fortifi\Webhooks\Payloads\Invoice\InvoiceDisregardedWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoicePaidWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceTransactionWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceWHP;
+use Fortifi\Webhooks\Payloads\Messenger\MessengerBouncedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderCreatedWHP;
 use Fortifi\Webhooks\Payloads\Order\OrderStateChangedWHP;
 use Fortifi\Webhooks\Payloads\Payment\PaymentAuthorisationTransactionWHP;
@@ -105,6 +107,7 @@ class Webhooks
       EmployeeWHE::AUTH                              => EmployeeAuthWHP::class,
       ChargebackWHE::CREATED                         => ChargebackWHP::class,
       ChargebackWHE::ACTIONED                        => ChargebackActionWHP::class,
+      MessengerWHE::BOUNCED                          => MessengerBouncedWHP::class
     ];
   }
 
