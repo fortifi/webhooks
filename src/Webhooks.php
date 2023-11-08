@@ -109,7 +109,7 @@ class Webhooks
       EmployeeWHE::AUTH                              => EmployeeAuthWHP::class,
       ChargebackWHE::CREATED                         => ChargebackWHP::class,
       ChargebackWHE::ACTIONED                        => ChargebackActionWHP::class,
-      MessengerWHE::BOUNCED                          => MessengerBouncedWHP::class
+      MessengerWHE::BOUNCED                          => MessengerBouncedWHP::class,
     ];
   }
 
