@@ -12,6 +12,7 @@ use Fortifi\Webhooks\Events\OrderWHE;
 use Fortifi\Webhooks\Events\PaymentAccountWHE;
 use Fortifi\Webhooks\Events\PaymentWHE;
 use Fortifi\Webhooks\Events\PurchaseWHE;
+use Fortifi\Webhooks\Events\ReviewWHE;
 use Fortifi\Webhooks\Events\TransactionWHE;
 use Fortifi\Webhooks\Payloads\Advertiser\AdvertiserCreatedWHP;
 use Fortifi\Webhooks\Payloads\Advertiser\Campaign\AdvertiserCampaignCreatedWHP;
@@ -50,6 +51,7 @@ use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionCancelWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionReEnableWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewalPriceChangeWHP;
 use Fortifi\Webhooks\Payloads\Purchase\PurchaseSubscriptionRenewWHP;
+use Fortifi\Webhooks\Payloads\Review\ReviewTrustpilotWHP;
 use Fortifi\Webhooks\Payloads\Transaction\TransactionFailedWHP;
 use Packaged\Helpers\Objects;
 
@@ -110,6 +112,7 @@ class Webhooks
       ChargebackWHE::CREATED                         => ChargebackWHP::class,
       ChargebackWHE::ACTIONED                        => ChargebackActionWHP::class,
       MessengerWHE::BOUNCED                          => MessengerBouncedWHP::class,
+      ReviewWHE::TRUSTPILOT                          => ReviewTrustpilotWHP::class,
     ];
   }
 
