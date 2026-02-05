@@ -2,8 +2,9 @@
 namespace Fortifi\Tests\Webhooks\Payloads;
 
 use Fortifi\Webhooks\Payloads\FortifiWebhookPayload;
+use PHPUnit\Framework\TestCase;
 
-class FortifiWebhookPayloadTest extends \PHPUnit_Framework_TestCase
+class FortifiWebhookPayloadTest extends TestCase
 {
   public function testWebookPayload()
   {
