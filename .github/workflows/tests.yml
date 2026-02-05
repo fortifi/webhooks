@@ -1,10 +1,10 @@
-name: Tests
+name: PHPUnit
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
+        php: [ '7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5' ]
 
     name: PHP ${{ matrix.php }}
 
@@ -29,5 +29,10 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist --no-progress
 
-      - name: Run tests
-        run: vendor/bin/phpunit --configuration phpunit.xml
+      - name: Run PHPUnit
+        run: |
+          vendor/bin/phpunit --coverage-text --coverage-filter src 2>&1 | tee coverage.txt
+          if ! grep -q "Lines:\s*100.00%" coverage.txt; then
+            echo "Coverage is not 100%"
+            exit 1
+          fi
