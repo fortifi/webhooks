@@ -6,6 +6,9 @@
          colors="true"
          processIsolation="false"
          stopOnFailure="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
          bootstrap="vendor/autoload.php">
   <testsuites>
     <testsuite name="Fortifi Test Suite">

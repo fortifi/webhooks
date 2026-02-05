@@ -62,7 +62,7 @@ class Webhooks
     $decoded = json_decode($json);
     $events = static::all();
     $event = Objects::property($decoded, 'event');
-    if(isset($events[$event]))
+    if($event !== null && isset($events[$event]))
     {
       return call_user_func([$events[$event], 'hydrateFromJson'], $json);
     }
