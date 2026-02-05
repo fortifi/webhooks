@@ -2,8 +2,10 @@
 namespace Fortifi\Tests\Webhooks\Payloads;
 
 use Fortifi\Webhooks\Payloads\FortifiWebhookPayload;
+use Fortifi\Webhooks\Payloads\Test\TestWHP;
+use PHPUnit\Framework\TestCase;
 
-class FortifiWebhookPayloadTest extends \PHPUnit_Framework_TestCase
+class FortifiWebhookPayloadTest extends TestCase
 {
   public function testWebookPayload()
   {
@@ -24,5 +26,36 @@ class FortifiWebhookPayloadTest extends \PHPUnit_Framework_TestCase
       $this->assertFalse($object->verifyPayload('cba'));
       $this->assertEquals(456, $object->getRequestId());
     }
+  }
+
+  /**
+   * Test that jsonSerialize works without deprecation in PHP 8+
+   * Requires #[\ReturnTypeWillChange] attribute on jsonSerialize()
+   */
+  public function testJsonSerializeCompatibility()
+  {
+    $deprecation = null;
+    set_error_handler(
+      function($errno, $errstr) use (&$deprecation) {
+        if(strpos($errstr, 'jsonSerialize') !== false)
+        {
+          $deprecation = $errstr;
+        }
+        return true;
+      },
+      E_DEPRECATED
+    );
+
+    try
+    {
+      $payload = new TestWHP('test.event');
+      json_encode($payload);
+    }
+    finally
+    {
+      restore_error_handler();
+    }
+
+    $this->assertNull($deprecation, $deprecation ?? '');
   }
 }

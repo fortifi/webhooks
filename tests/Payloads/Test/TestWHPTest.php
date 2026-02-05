@@ -2,8 +2,9 @@
 namespace Fortifi\Tests\Webhooks\Payloads\Test;
 
 use Fortifi\Webhooks\Payloads\Test\TestWHP;
+use PHPUnit\Framework\TestCase;
 
-class TestWHPTest extends \PHPUnit_Framework_TestCase
+class TestWHPTest extends TestCase
 {
   public function testTransport()
   {
