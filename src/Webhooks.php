@@ -22,6 +22,7 @@ use Fortifi\Webhooks\Payloads\Contact\ContactPhoneWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerCreatedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerDefaultEmailChangedWHP;
 use Fortifi\Webhooks\Payloads\Customer\CustomerEmailUnsubscribedWHP;
+use Fortifi\Webhooks\Payloads\Customer\CustomerMigratedWHP;
 use Fortifi\Webhooks\Payloads\Customer\SubjectAccessRequestWHP;
 use Fortifi\Webhooks\Payloads\Employee\EmployeeAuthWHP;
 use Fortifi\Webhooks\Payloads\Invoice\InvoiceCreditWHP;
@@ -78,6 +79,7 @@ class Webhooks
       CustomerWHE::EMAIL_UNSUBSCRIBED                => CustomerEmailUnsubscribedWHP::class,
       CustomerWHE::SUBJECT_ACCESS_REQUEST            => SubjectAccessRequestWHP::class,
       CustomerWHE::DEFAULT_EMAIL_UPDATED             => CustomerDefaultEmailChangedWHP::class,
+      CustomerWHE::MIGRATED                          => CustomerMigratedWHP::class,
       ContactWHE::PHONE_SUBSCRIBED                   => ContactPhoneWHP::class,
       ContactWHE::PHONE_UNSUBSCRIBED                 => ContactPhoneWHP::class,
       InvoiceWHE::CREATED                            => InvoiceWHP::class,

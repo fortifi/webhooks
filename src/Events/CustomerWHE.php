@@ -7,4 +7,5 @@ final class CustomerWHE
   const SUBJECT_ACCESS_REQUEST = 'customer.sar';
   const EMAIL_UNSUBSCRIBED = 'customer.email.unsubscribed';
   const DEFAULT_EMAIL_UPDATED = 'customer.default-email.updated';
+  const MIGRATED = 'customer.migrated';
 }
