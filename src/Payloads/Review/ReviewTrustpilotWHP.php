@@ -2,12 +2,13 @@
 
 namespace Fortifi\Webhooks\Payloads\Review;
 
-class ReviewTrustpilotWHP extends AbstractReviewWHP
+use Fortifi\Webhooks\Payloads\Foundation\DataNodeWHP;
+
+class ReviewTrustpilotWHP extends DataNodeWHP
 {
-  public $provider;
-  public $providerRating;
-  public $providerRatingContent;
-  public $providerRatingMax;
-  public $providerRatingSubject;
+  public $customerFid;
+  public $rating;
+  public $ratingMax;
+  public $providerId;
   public $providerUrl;
 }
