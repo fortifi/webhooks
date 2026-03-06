@@ -5,8 +5,8 @@ use Fortifi\Webhooks\Payloads\FortifiWebhookPayload;
 
 class DataNodeWHP extends FortifiWebhookPayload
 {
-  public $fid;
   public $id;
+  public $fid;
   public $displayName;
   public $description;
 }
