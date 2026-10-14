@@ -16,4 +16,6 @@ class OrderWHP extends DataNodeWHP
   public $currency;
   public $totalAmountUsd;
   public $exchangeRate;
+
+  public $externalReference;
 }
